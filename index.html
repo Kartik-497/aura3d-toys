@@ -72,7 +72,7 @@ a{text-decoration:none;color:inherit}
 #discount-popup{position:fixed;inset:0;z-index:99980;display:none;align-items:center;justify-content:center;padding:20px}
 #discount-popup.active{display:flex}
 .popup-backdrop{position:absolute;inset:0;background:rgba(10,8,18,0.85);backdrop-filter:blur(12px)}
-.popup-box{position:relative;z-index:1;background:var(--panel);border:1px solid rgba(212,168,67,0.3);border-radius:var(--r-lg);max-width:520px;width:100%;padding:0;overflow:hidden;animation:popIn 0.5s cubic-bezier(0.34,1.56,0.64,1)}
+.popup-box{position:relative;z-index:1;background:var(--panel);border:1px solid rgba(212,168,67,0.3);border-radius:var(--r-lg);max-width:520px;width:100%;max-height: 92vh; overflow-y: auto; overflow-x: hidden; animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1)}
 
 @keyframes popIn{from{transform:scale(0.7) translateY(40px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
 
@@ -525,7 +525,7 @@ footer{background:var(--void);border-top:1px solid var(--border);padding:80px 5v
       <li><a href="#pricing">Bundles</a></li>
     </ul>
     <div class="nav-right">
-      <button class="btn btn-gold" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Unlock Collection</button>
+      <button class="btn btn-gold" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})" style="height: 45px;">Unlock Collection</button>
       <div class="mobile-menu-btn" id="menuBtn" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
@@ -589,35 +589,21 @@ footer{background:var(--void);border-top:1px solid var(--border);padding:80px 5v
   </div>
 </section>
 
-<!-- ─── TRUST STRIP ─── -->
-<div class="trust-strip">
-  <div class="trust-inner">
-    <div class="trust-item">
-      <div class="trust-icon">📵</div>
-      <div class="trust-copy"><strong>100% Screen-Free</strong><span>Tactile hands-on focus</span></div>
-    </div>
-    <div class="trust-div"></div>
-    <div class="trust-item">
-      <div class="trust-icon">🌳</div>
-      <div class="trust-copy"><strong>Sustainably Sourced</strong><span>FSC-certified wood</span></div>
-    </div>
-    <div class="trust-div"></div>
-    <div class="trust-item">
-      <div class="trust-icon">🔬</div>
-      <div class="trust-copy"><strong>STEM-Aligned</strong><span>Endorsed by educators</span></div>
-    </div>
-    <div class="trust-div"></div>
-    <div class="trust-item">
-      <div class="trust-icon">⭐</div>
-      <div class="trust-copy"><strong>4.9 Star Rating</strong><span>From 12,000+ families</span></div>
-    </div>
-    <div class="trust-div"></div>
-    <div class="trust-item">
-      <div class="trust-icon">🛡️</div>
-      <div class="trust-copy"><strong>Lost a Piece?</strong><span>Free replacement guarantee</span></div>
-    </div>
+<!-- ─── STATS BANNER ─── -->
+<div class="stats-banner">
+  <div class="stats-inner">
+    <div class="stat-item reveal"><div class="stat-num">50K+</div><div class="stat-label">Kits Built</div></div>
+    <div class="stat-div"></div>
+    <div class="stat-item reveal"><div class="stat-num">-42%</div><div class="stat-label">Screen Time Reduction</div></div>
+    <div class="stat-div"></div>
+    <div class="stat-item reveal"><div class="stat-num">100%</div><div class="stat-label">Eco-Certified Wood</div></div>
+    <div class="stat-div"></div>
+    <div class="stat-item reveal"><div class="stat-num">4.9★</div><div class="stat-label">Family Rating</div></div>
+    <div class="stat-div"></div>
+    <div class="stat-item reveal"><div class="stat-num">38+</div><div class="stat-label">Countries Reached</div></div>
   </div>
 </div>
+
 
 <!-- ─── WHY ─── -->
 <section class="why-section" id="why">
@@ -811,20 +797,6 @@ footer{background:var(--void);border-top:1px solid var(--border);padding:80px 5v
   </div>
 </section>
 
-<!-- ─── STATS BANNER ─── -->
-<div class="stats-banner">
-  <div class="stats-inner">
-    <div class="stat-item reveal"><div class="stat-num">50K+</div><div class="stat-label">Kits Built</div></div>
-    <div class="stat-div"></div>
-    <div class="stat-item reveal"><div class="stat-num">-42%</div><div class="stat-label">Screen Time Reduction</div></div>
-    <div class="stat-div"></div>
-    <div class="stat-item reveal"><div class="stat-num">100%</div><div class="stat-label">Eco-Certified Wood</div></div>
-    <div class="stat-div"></div>
-    <div class="stat-item reveal"><div class="stat-num">4.9★</div><div class="stat-label">Family Rating</div></div>
-    <div class="stat-div"></div>
-    <div class="stat-item reveal"><div class="stat-num">38+</div><div class="stat-label">Countries Reached</div></div>
-  </div>
-</div>
 
 <!-- ─── TESTIMONIALS ─── -->
 <section class="testi-section" id="reviews">
